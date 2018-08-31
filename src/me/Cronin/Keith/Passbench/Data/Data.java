@@ -33,7 +33,7 @@ import me.Cronin.Keith.Passbench.Threading.CrackerThread;
 /* Data.java
  * 
  * This abstract class acts as a class for storing data, and housing the functions that all of the classes 
- * in Passbench make calls to. It acts as
+ * in Passbench make calls to. It acts as a bridge between actual Passbench classes (like CrackerThread) and the JavaFX GUI
  * 
  */
 
@@ -51,7 +51,7 @@ public abstract class Data {
 	
 	public static Long NumAttempts = 0L;
 	
-	//A upcasted buffer for storing global data. Can be referenced at any time to get access to current cracker configurations.
+	//A buffer for storing global data. Can be referenced at any time to get access to current cracker configurations.
 	public static Object[] configBuffer;
 	
 	//A saved instance of CrackerThread(s) for global reference.
