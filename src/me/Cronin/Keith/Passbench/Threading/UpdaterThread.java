@@ -35,7 +35,7 @@ public class UpdaterThread extends Thread{
 	public UpdaterThread(String name) {
 		this.setName(name);
 		this.setPriority(MIN_PRIORITY);
-		this.setDaemon(true);
+		this.setDaemon(false);
 	}
 	
 	public void run() {
