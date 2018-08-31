@@ -43,13 +43,11 @@ public class UpdaterThread extends Thread{
 		Data.controller.NumAttempts.setText(String.valueOf(Data.NumAttempts));
 		Data.controller.NumAttemptsPerSecond.setText(String.valueOf(Data.currentAttemptsPerSecond()));
 		if(Data.controller.BenchmarkPasswordBox.getText().isEmpty() && !Data.isBenchmarking) {
-			//Turn everything back on because the user isn't going to benchmark?
 			Data.controller.RDOButton1.setDisable(false);
 			Data.controller.RDOButton2.setDisable(false);
 			Data.controller.RDOButton3.setDisable(false);
 			Data.controller.RDOButton4.setDisable(false);
 		} else {
-			//Here we disable everything in the spec box because the user isn't going to try and crack a password. But benchmark
 			Data.controller.RDOButton1.setDisable(true);
 			Data.controller.RDOButton2.setDisable(true);
 			Data.controller.RDOButton3.setDisable(true);
