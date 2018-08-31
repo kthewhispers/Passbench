@@ -36,7 +36,6 @@ public class Passbench extends Application {
 	public void start(Stage primaryStage) throws IOException {
 			FXMLLoader loader = new FXMLLoader(getClass().getResource("Passbench.fxml"));
 		    Parent root = loader.load();
-		    //Now we have access to getController() through the instance... don't forget the type cast
 		    controller = (PassbenchController)loader.getController();
 			Scene scene = new Scene(root,600,400);
 			primaryStage.setScene(scene);
