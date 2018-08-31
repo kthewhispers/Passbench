@@ -8,6 +8,10 @@ Passbench, a Password Benchmarking Tool, is completely functional from this init
 
 Ultimately, Passbench is made with speed, and efficiency in mind in order to provide the most realistic results.
 
+# Download Passbench
+
+[Get Passbench on Github](https://github.com/kthewhispers/Passbench/blob/master/binaries/)
+
 ## Currently Featured
 
 - Passhack features a convienient, intuitive, responsive GUI that is comfortable, and pleasing to the eyes.
