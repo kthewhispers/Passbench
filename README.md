@@ -17,7 +17,8 @@ Ultimately, Passbench is made with speed, and efficiency in mind in order to pro
 
 - Passbench shows you how many passwords per second it makes during the benchmarking session.
 
-- Passbench allows you to choose how many threads it uses to benchmark the password, allowing you to unleash the full power of your CPU, and giving you all the power.
+- Passbench allows you to choose how many threads it uses to benchmark the password, allowing you to unleash the full power of your CPU, and giving you all the power. You can use a small few threads so you can benchmark and still do other stuff on your machine, or use as many as you please to pull all the power of your machine into Passbench.
+
   > My suggestion for a Thread count is to experiment with it yourself, as this is a benchmarking tool. I personally suggest that you use   the number of threads(not physical cores) minus 1, or, you can just use the number of physical cores your CPU has. This has yielded the   best results for my machine.
 
 - The following Password Specifications are valid in Passbench
