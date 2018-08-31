@@ -1,10 +1,10 @@
 # Passbench
 
-Passbench is a **cross platform**, highly configurable password benchmarking tool that you can use to understand how secure a password is against a brute-force attack. In theory, you could use this program to generate a UTF-8 string of any length (within reason) that can contain numbers, letters, and symbols in any combination. 
+Passbench is a **_cross platform_**, highly configurable password benchmarking tool that you can use to understand how secure a password is against a brute-force attack. In theory, you could use this program to generate a UTF-8 string of any length (within reason) that can contain numbers, letters, and symbols in any combination. 
 
 This is a project I'm doing for experience. I plan to update frequently until the final, completely comprehensive version.
 
-Passbench, a Password Benchmarking Tool, is completely functional from this initial release, and will grow more comprehensive in time.
+Passbench, a Password Benchmarking Tool, is *completely functional from this initial release*, and **will grow more comprehensive in time**.
 
 Ultimately, Passbench is made with speed, and efficiency in mind in order to provide the most realistic results.
 
