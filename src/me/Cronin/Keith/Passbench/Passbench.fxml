@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- License & Copyright Notice
+ * 
+ * Copyright (C) 2018  Keith Cronin
+ * 
+ * This file is part of Passbench.
+
+    Passbench is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, only version 3 of the license, also known
+    as GNU GPLv3.
+
+    Passbench is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Passbench.  If not, see <https://www.gnu.org/licenses/>.
+    
+    E-mail Address: k dot cronin1100010 at gmail dot com
+ -->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="400.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.Cronin.Keith.Passbench.PassbenchController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="300.0" style="-fx-border-style: solid; -fx-border-size: 1px; -fx-border-color: white;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" prefHeight="35.0" prefWidth="300.0" style="-fx-border-width: 1px; -fx-border-color: white;" text="Passbench Configuration" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label layoutX="14.0" layoutY="81.0" text="Threads:" textFill="WHITE">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="It's best to experiment with this. Typically use the amount of threads your CPU has - 1, or use the number of physical cores your CPU has." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <TextField fx:id="ThreadCounter" alignment="CENTER" layoutX="192.0" layoutY="77.0" prefHeight="26.0" prefWidth="44.0">
+               <tooltip>
+                  <Tooltip autoFix="false" text="It's best to experiment with this. Typically use the amount of threads your CPU has - 1, or use the number of physical cores your CPU has." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip></TextField>
+            <Label layoutX="14.0" layoutY="93.0" text="Better Cracker Integrity:" textFill="WHITE">
+               <padding>
+                  <Insets left="10.0" top="20.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="Ensures a good seed for the cracker's generator to provide more randomness without a hit to performance." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <CheckBox fx:id="AdvancedCalcBool" layoutX="206.0" layoutY="112.0" mnemonicParsing="false">
+               <tooltip>
+                  <Tooltip autoFix="false" text="Ensures a good seed for the cracker's generator to provide more randomness without a hit to performance." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip></CheckBox>
+            <Separator layoutX="-1.0" layoutY="152.0" prefHeight="5.0" prefWidth="300.0" />
+            <Label layoutX="105.0" layoutY="40.0" text="Performance" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="50.0" layoutY="61.0" prefWidth="200.0" />
+            <Label layoutX="72.0" layoutY="160.0" text="Password Specifications" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="49.0" layoutY="181.0" prefWidth="200.0" />
+            <Label alignment="CENTER" layoutX="3.0" layoutY="311.0" prefHeight="38.0" prefWidth="294.0" text="Benchmark Password:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="Enter the password below you'd like to test. Make sure your password matches the password specification you chose above or Passbench won't be able to crack it. Be warned, Passbench only support UTF-8 characters." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <TextField fx:id="BenchmarkPasswordBox" alignment="CENTER" layoutX="13.0" layoutY="344.0" prefHeight="26.0" prefWidth="275.0" promptText="Benchmark a password against Passhack">
+               <tooltip>
+                  <Tooltip autoFix="false" text="Enter the password you'd like to test. Make sure your password matches the password specification you chose above or Passbench won't be able to crack it. Be warned, Passbench only supports UTF-8 characters." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip></TextField>
+            <Label layoutX="24.0" layoutY="253.0" text="Numbers and Letters:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password generator will only generate numbers and letters, no symbols of any kind." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <Label layoutX="25.0" layoutY="272.0" text="Symbols, Numbers, Letters:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password will generate numbers, letters, and symbols." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <RadioButton fx:id="RDOButton1" layoutX="206.0" layoutY="252.0" mnemonicParsing="false">
+               <toggleGroup>
+                  <ToggleGroup fx:id="passType" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="RDOButton2" layoutX="206.0" layoutY="272.0" mnemonicParsing="false" toggleGroup="$passType" />
+            <Label layoutX="24.0" layoutY="233.0" text="Only Letters:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password generator will only generate letters." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <RadioButton fx:id="RDOButton3" layoutX="206.0" layoutY="232.0" mnemonicParsing="false" selected="true" toggleGroup="$passType" />
+            <Label layoutX="24.0" layoutY="213.0" text="Only Numbers:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password generator will only generate numbers." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <RadioButton fx:id="RDOButton4" layoutX="206.0" layoutY="212.0" mnemonicParsing="false" toggleGroup="$passType" />
+         </children>
+      </Pane>
+      <Pane id="PasshackConfigContainer" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" style="-fx-border-style: solid; -fx-border-size: 1px; -fx-border-color: white;">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="35.0" prefWidth="300.0" style="-fx-border-width: 1px; -fx-border-color: white;" text="Passbench Cracker" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font name="Calibri" size="17.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <Label alignment="CENTER" layoutX="125.0" layoutY="39.0" text="Controls" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="54.0" layoutY="59.0" prefWidth="200.0" />
+            <Label alignment="CENTER" layoutX="125.0" layoutY="170.0" text="Statistics" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="174.0" text="Password Crack Attempts:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The number of passwords Passbench has generated in this current benchmark session." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <Label fx:id="NumAttempts" alignment="CENTER" layoutX="28.0" layoutY="210.0" prefHeight="28.0" prefWidth="246.0" text="0" textAlignment="CENTER" textFill="WHITE">
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="74.0" layoutY="236.0" text="Generations per Second:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The number of passwords generated per second." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <Separator layoutX="54.0" layoutY="190.0" prefWidth="200.0" />
+            <Label fx:id="NumAttemptsPerSecond" alignment="CENTER" layoutX="28.0" layoutY="250.0" prefHeight="28.0" prefWidth="246.0" text="0" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="320.0" text="Cracked Password:" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password directly from the generator, displaying the password it cracked and then match against the one you supplied." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <TextField fx:id="CrackedPasswordBox" alignment="CENTER" layoutX="12.0" layoutY="343.0" onKeyTyped="#TypedInCrackBox" onMouseEntered="#OnInsideCrackedPassBox" prefHeight="26.0" prefWidth="275.0" promptText="The cracked password will appear here." style="-fx-background-color: #e7e7e7; -fx-border-color: white;">
+               <cursor>
+                  <Cursor fx:constant="NONE" />
+               </cursor>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The password directly from the generator, displaying the password it cracked and then match against the one you supplied." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip></TextField>
+            <Label layoutX="121.0" layoutY="66.0" text="Benchmark" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="114.0" layoutY="84.0" prefHeight="3.0" prefWidth="78.0" />
+            <Button fx:id="BtnBenchStart" alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="92.0" mnemonicParsing="false" onMouseClicked="#BStartButtonClick" styleClass="btnStart" stylesheets="@ButtonReaction.css" text="Begin" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="Begins benchmarking your supplied password against Passbench's cracker." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Button fx:id="BtnBenchStop" alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="136.0" mnemonicParsing="false" onMouseClicked="#BPauseButtonClick" prefHeight="29.0" prefWidth="54.0" styleClass="btnStop" stylesheets="@ButtonReaction.css" text="Stop" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="14.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="Stops the benchmarking session and deletes all session data." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Button>
+            <Label alignment="CENTER" layoutX="85.0" layoutY="273.0" text="Cracked Password in:" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+               <tooltip>
+                  <Tooltip autoFix="false" text="The time it took to crack your password." textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Calibri" size="12.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <Label fx:id="CrackFinishTime" alignment="CENTER" layoutX="3.0" layoutY="294.0" prefHeight="18.0" prefWidth="294.0" text="N/A" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Calibri" size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane fx:id="GreetingContainer" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #000000;">
+         <children>
+            <Label layoutX="110.0" layoutY="57.0" text="Passbench" textFill="#dedada">
+               <font>
+                  <Font name="Monospaced Regular" size="70.0" />
+               </font>
+            </Label>
+            <Label layoutX="241.0" layoutY="127.0" text="Version 1.0" textFill="#dedada">
+               <font>
+                  <Font name="Monospaced Regular" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="BtnCrackn" alignment="CENTER" layoutX="253.0" layoutY="287.0" mnemonicParsing="false" onMouseClicked="#CracknClick" styleClass="btnCrackn" stylesheets="@ButtonReaction.css" text="Start" textAlignment="CENTER">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+               <padding>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
+               </padding>
+            </Button>
+            <TitledPane alignment="CENTER" contentDisplay="CENTER" expanded="false" layoutX="149.0" layoutY="151.0" prefHeight="110.0" prefWidth="300.0" stylesheets="@About.css" text="About Passbench" textAlignment="CENTER" textFill="#dedada">
+               <font>
+                  <Font name="Monospaced Regular" size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <content>
+                  <Label alignment="CENTER" prefHeight="350.0" prefWidth="280.0" text="Passbench is a highly configurable password benchmarking tool that you can use to understand how secure a password is against a brute-force attack. Enjoy!" textAlignment="CENTER" textFill="#dedada" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </content>
+            </TitledPane>
+            <TitledPane id="legal" alignment="CENTER" contentDisplay="CENTER" expanded="false" layoutX="338.0" layoutY="328.0" prefHeight="65.0" prefWidth="256.0" stylesheets="@About.css" text="Legal" textAlignment="CENTER" textFill="#dedada">
+               <font>
+                  <Font name="Monospaced Regular" size="13.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <content>
+                  <Label alignment="TOP_LEFT" prefHeight="34.0" prefWidth="223.0" text="Copyright (C) 2018 Keith Cronin Licensed under GNU GPLv3 only" textFill="#dedada" wrapText="true">
+                     <font>
+                        <Font name="Monospaced Regular" size="12.0" />
+                     </font>
+                  </Label>
+               </content>
+            </TitledPane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
