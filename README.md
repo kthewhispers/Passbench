@@ -12,6 +12,10 @@ Ultimately, Passbench is made with speed, and efficiency in mind in order to pro
 
 - Passbench keeps track of how long it takes cracking the supplied password, giving you the exact time it took after it's finished with a benchmark, even if it takes days.
 
+- Passbench shows you how many times it had to generate a password before it generated the one you supplied.
+
+- Passbench shows you how many passwords per second it makes during the benchmarking session.
+
 - Passbench allows you to choose how many threads it uses to benchmark the password, allowing you to unleash the full power of your CPU, and giving you all the power.
   > My suggestion for a Thread count is to experiment with it yourself, as this is a benchmarking tool. I personally suggest that you use   the number of threads(not physical cores) minus 1, or, you can just use the number of physical cores your CPU has. This has yielded the   best results for my machine.
 
@@ -23,3 +27,4 @@ Ultimately, Passbench is made with speed, and efficiency in mind in order to pro
   - Numbers and Letters
   
   - Symbols, Numbers, and Letters
+
