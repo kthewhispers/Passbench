@@ -8,6 +8,10 @@ Passbench, a Password Benchmarking Tool, is *completely functional from this ini
 
 Ultimately, Passbench is made with speed, and efficiency in mind in order to provide the most realistic results.
 
+## What is Passbench useful for?
+
+A lot of *people don't know what makes a good password*. In fact, a lot of password requirements on websites and applications actually **reduce the security** of your password. Experimenting with **Passbench allows you to understand what makes a good password**. Such knowledge becomes really useful when you are trying to create a password or passcode for any reason. While brute-force password attacks aren't a huge problem today, this little application's usefulness still stands.
+
 # Download Passbench
 
 [Get Passbench on Github](https://github.com/kthewhispers/Passbench/blob/master/binaries/)
