@@ -2,7 +2,7 @@
 
 Passbench is a **_cross platform_**, highly configurable password benchmarking tool that you can use to understand how secure a password is against a brute-force attack. 
 
-This is a *simple* project I'm doing for experience. I plan to update frequently until the final, completely comprehensive version.
+This is a *simple* project I'm doing for fun. I put it here on Github in the case that this could prove useful, or interesting.
 
 Passbench, a Password Benchmarking Tool, is *completely functional from this initial release*, and **will grow more comprehensive in time**.
 
