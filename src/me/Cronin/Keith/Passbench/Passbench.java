@@ -41,6 +41,9 @@ public class Passbench extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("Passbench: The Password Benchmark Tool");
+			primaryStage.setOnCloseRequest(event -> {
+				System.exit(0);
+			});
 			primaryStage.show();
 	}
 	
