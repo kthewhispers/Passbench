@@ -41,6 +41,7 @@ public class Passbench extends Application {
 			primaryStage.setScene(scene);
 			primaryStage.setResizable(false);
 			primaryStage.setTitle("Passbench: The Password Benchmark Tool");
+		//When user closes Passbench via (X) button it terminates the Virtual Machine.
 			primaryStage.setOnCloseRequest(event -> {
 				System.exit(0);
 			});
